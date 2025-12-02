@@ -26,10 +26,14 @@ function createGallery() {
 
     const img = document.createElement('img');
 
-    const srcset = `${basePath}${image.id}-small-1x..jpg 480w,
+    const srcset = `${basePath}${image.id}-small-1x..jpg 480w, 
+    ${basePath}${image.id}-small-2x..jpg 960w, 
     ${basePath}${image.id}-medium-1x..jpg 800w,
+    ${basePath}${image.id}-medium-2x..jpg 1600w,
     ${basePath}${image.id}-large-1x..jpg 1200w,
-    ${basePath}${image.id}-xlarge-1x..jpg 1600w`;
+    ${basePath}${image.id}-large-2x..jpg 2400w,
+    ${basePath}${image.id}-xlarge-1x..jpg 1600w,
+    ${basePath}${image.id}-xlarge-2x..jpg 3200w`;
 
     img.srcset = srcset;
     img.sizes = '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw';
